@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Outfit, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+	transition: background-color 0.4s, color 0.4s;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+.no-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+@theme {
+	--font-landing:  sans-serif;
+
+	--text-h1: 48px;
+	--text-h2: 30px;
+	--text-h3: 28px;
+	--text-h4: 24px;
+	--text-h5: 20px;
+	--text-h6: 16px;
+
+	--spacing-xs: 4px;
+	--spacing-sm: 12px;
+	--spacing-md: 20px;
+	--spacing-lg: 32px;
+	--spacing-xl: 49px;
+	--spacing-2xl: 60px;
+	--spacing-3xl: 90px;
+
+	/* Light */
+	--color-background: #f5f2ec;        
+	--color-background-soft: #e8e2d6;   
+	--color-background-dark: #d7c9b5;  
+
+	--color-text: #33373f;              
+	--color-text-muted: #6c727c;        
+	--color-text-contrast: #ffffff;
+
+	--color-accent: #455763;           
+	--color-accent-hover: #2f3d47;      
+	--color-secondary: #eea736;          
+
+	--color-border: #d5cec2;
+	--color-card: #ffffff;
+	--color-shadow: rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+	--color-background: #151b22;        
+	--color-background-soft: #1f272f;   
+	--color-background-dark: #0e1318;   
+
+	--color-text: #e5e7eb;              
+	--color-text-muted: #9ca3af;        
+	--color-text-contrast: #ffffff;
+
+	--color-accent: #b0c4cf;            
+	--color-accent-hover: #c4d4df;      
+	--color-secondary: #eea736;         
+
+	--color-border: #313843;
+	--color-card: #1f272f;
+	--color-shadow: rgba(0, 0, 0, 0.45);
+}
+
+h1 {
+	@apply font-bold;
+	font-size: var(--text-h1);
+	line-height: 125%;
+	font-family: var(--font-title);
+}
+
+h2 {
+	@apply font-bold;
+	font-size: var(--text-h2);
+	line-height: 125%;
+	font-family: var(--font-title);
+}
+
+h3 {
+	@apply font-bold;
+	font-size: var(--text-h3);
+	line-height: 125%;
+	font-family: var(--font-title);
+}
+
+h4 {
+	@apply font-bold;
+	font-size: var(--text-h4);
+	line-height: 125%;
+	font-family: var(--font-title);
+}
+
+h5 {
+	font-size: var(--text-h5);
+	line-height: 125%;
+	font-family: var(--font-title);
+}
+
+h6 {
+	font-size: var(--text-h6);
+	line-height: 125%;
+	font-family: var(--font-title);
+}
+
+a {
+	transition: text-shadow 0.3s ease, color 0.3s ease;
+}
