@@ -1,8 +1,8 @@
+import type { TodoComponentActionsProps } from "../types/todo.type";
 import { TodoItem } from "./TodoItem";
 import { FaTasks } from "react-icons/fa";
 
-
-export const TodoList = ({ todos, onToggleTodo, onDeleteTodo, onToggleFavorite }) => {
+export const TodoList = ({ todos, onToggleTodo, onDeleteTodo, onToggleFavorite }: TodoComponentActionsProps ) => {
 	return (
 		<div className="space-y-4">
 			<h2 className="flex items-center gap-2 text-sm font-semibold text-text tracking-tight">

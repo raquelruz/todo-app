@@ -1,10 +1,23 @@
 import { FaTrashAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
+import type { Todo } from "../types/todo.type";
 
+/**
+ * Cuando usar interface:
+ * - Tipando o modelando objetos grandes
+ * - Tipando una API
+ * Tipando una estructura muy estable
+ */
 
+interface TodoItemProps {
+	todo: Todo;
+	onToggleTodo: (id: number) => void;
+	onDeleteTodo: (id: number) => void;
+	onToggleFavorite: (id: number) => void;
+};
 
-export const TodoItem = ({ todo, onToggleTodo, onDeleteTodo, onToggleFavorite }) => {
+export const TodoItem = ({ todo, onToggleTodo, onDeleteTodo, onToggleFavorite }: TodoItemProps) => {
 	return (
 		<div
 			onClick={() => onToggleTodo(todo.id)}

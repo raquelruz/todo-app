@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { FaPencilAlt } from "react-icons/fa";
+import type { Todo } from "../types/todo.type";
 
 const INITIAL_FORM_STATE = { todoText: "" };
 
-export const TodoForm = ({ addTodo }) => {
+type TodoFormProps = {
+	addTodo: (newTodo: Todo) => void;
+}
+
+export const TodoForm = ({ addTodo }: TodoFormProps) => {
 	const [form, setForm] = useState(INITIAL_FORM_STATE);
 	const [error, setError] = useState(false);
 
@@ -15,7 +20,7 @@ export const TodoForm = ({ addTodo }) => {
 			return;
 		}
 
-		const newTodo = {
+		const newTodo: Todo = {
 			text: form.todoText.trim(),
 			completed: false,
 			favorite: false,

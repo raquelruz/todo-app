@@ -1,7 +1,8 @@
+import type { TodoComponentActionsProps } from "../types/todo.type";
 import { TodoItem } from "./TodoItem";
 import { FaStar } from "react-icons/fa";
 
-export const Favorites = ({ todos, onToggleTodo, onDeleteTodo, onToggleFavorite }) => {
+export const Favorites = ({ todos, onToggleTodo, onDeleteTodo, onToggleFavorite }: TodoComponentActionsProps ) => {
 	const favorites = todos.filter((todo) => todo.favorite);
 
 	return (
