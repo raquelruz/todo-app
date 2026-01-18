@@ -1,6 +1,10 @@
 import { FaTrashAlt } from "react-icons/fa";
 
-export const Footer = ({ onDeleteAll }) => {
+type FooterProps = {
+	onDeleteAll: () => void;
+};
+
+export const Footer = ({ onDeleteAll }: FooterProps) => {
 	return (
 		<footer className="w-full border-t border-border bg-background py-4 px-4 flex items-center justify-center">
 			<span className="pr-2 text-red-500">

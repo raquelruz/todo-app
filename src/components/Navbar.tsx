@@ -1,7 +1,13 @@
-import { Tabs } from "../helpers/tabs";
+import { Tabs, type TabType } from "../helpers/tabs";
 import { ThemeToggle } from "./ThemeToggle";
 
-export const Navbar = ({ brand = "To-Do App", activeTab, setActiveTab }) => {
+type NavProps = {
+	brand: string,
+	activeTab: string,
+	setActiveTab: (tab: TabType) => void; 
+}
+
+export const Navbar = ({ brand, activeTab, setActiveTab }: NavProps) => {
 	return (
 		<nav className="px-8 py-3 bg-background backdrop-blur-md border-b border-border sticky top-0 z-10">
 			<div className="flex items-center justify-between">
